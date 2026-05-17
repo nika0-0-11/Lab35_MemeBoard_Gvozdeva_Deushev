@@ -18,6 +18,8 @@
 
         ```bash
         git clone https://github.com/nika0-0-11/Lab35_MemeBoard_Gvozdeva_Deushev
+        
+        cd Lab35_MemeBoard_Gvozdeva_Deushev
 
         code .
         ```
