@@ -25,7 +25,7 @@ function createCardHTML(meme) {
                 <span class="meme-category">${meme.category}</span>
                 <p class="meme-rating">${stars}</p>
                 <p class="meme-date">Добавлено: ${date}</p>
-                <button onClick="handleDelete(${meme.id}">🗑️ Удалить</button>
+                <button onClick="handleDelete(${meme.id})">🗑️ Удалить</button>
             </div>
         `;
 }
@@ -57,6 +57,7 @@ async function handleAdd() {
     btnAdd.textContent = "Добавляем...";
     try {
         await addMeme(title, category, rating);
+
         inputTitle.value = "";
 
         await loadMemes();

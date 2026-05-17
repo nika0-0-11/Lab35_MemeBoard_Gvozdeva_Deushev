@@ -12,7 +12,7 @@ async function addMeme(title, category, rating) {
     const response = await fetch(API_URL, {
         method: "POST",
         headers: {
-            "Content-Type": "application.json",
+            "Content-Type": "application/json",
         },
         body: JSON.stringify({
             title: title,
