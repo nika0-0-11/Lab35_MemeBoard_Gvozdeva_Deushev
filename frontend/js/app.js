@@ -5,9 +5,16 @@ const inputTitle = document.getElementById("inputTitle");
 const inputCategory = document.getElementById("inputCategory");
 const inputRating = document.getElementById("inputRating");
 const btnAdd = document.getElementById("btnAdd");
+const memesCount = document.getElementById("memesCount");
 
 function renderMemes(memes) {
     loadingText.style.display = "none";
+    
+    if (memesCount) {
+        const count = memes.length;
+        memesCount.textContent = `Всего: ${count}`;
+    }
+    
     if (memes.length === 0) {
         memesGrid.innerHTML = '<p class="empty-text">Мемов пока нет. Добавьте первый!</p>';
         return;
